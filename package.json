@@ -2,7 +2,7 @@
   "name": "react-redux-code-generator",
   "displayName": "React Redux Code Generator",
   "description": "This extension aims to help developer get pre-backed boiler plate code following best practices and bring consistency into project. It generates opinionated, batteries-included code snippets.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "KrupeshAnadkat",
   "keywords": [
     "react",
@@ -31,16 +31,25 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:react-redux-code-generator.reactRedux"
+    "onCommand:extension.reactredux"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "react-redux-code-generator.reactRedux",
+        "command": "extension.reactredux",
         "title": "Generate React Redux Component"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.reactredux",
+          "group": "reactReduxCgGroup@1",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",

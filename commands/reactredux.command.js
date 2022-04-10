@@ -1,8 +1,8 @@
 const { window } = require("vscode")
-const { PROMPT_TYPES } = require("../enums")
-const { validateUserAction, promptForTargetDirectory, createComponent, notifyUser } = require("../utils")
+const { PROMPT_TYPES } = require("../app/enums")
+const { validateUserAction, promptForTargetDirectory, createComponent, notifyUser } = require("../app/utils")
 
-const reactReduxGenerator = async () =>  {
+const reactRedux = async () =>  {
     try {
         // 1. Input Component Name
         const componentName = await window.showInputBox({
@@ -34,4 +34,4 @@ const reactReduxGenerator = async () =>  {
     }
 }
 
-module.exports = reactReduxGenerator
+module.exports = reactRedux
