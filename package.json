@@ -10,13 +10,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:react-redux-code-generator.helloWorld"
+    "onCommand:react-redux-code-generator.reactRedux"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "react-redux-code-generator.helloWorld",
+        "command": "react-redux-code-generator.reactRedux",
         "title": "Generate React Redux Component"
       }
     ]

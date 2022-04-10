@@ -25,7 +25,7 @@ const reactReduxGenerator = async () =>  {
         validateUserAction(currentDirectory)
 
         // 4. Create Files & Folders
-        createComponent(componentName, currentDirectory)
+        createComponent(componentName, reduxSliceName, currentDirectory)
 
         // 5. Inform User
         notifyUser(`${componentName} component successfully created`)

@@ -5,6 +5,11 @@ const { existsSync, writeFile } = require("fs");
 
 const { PROMPT_TYPES } = require('./enums');
 const getComponentTemplate = require("./templates/react-redux/componentTemplate");
+const getComponentScssTemplate = require("./templates/react-redux/componentScss");
+const getComponentUtilsTemplate = require("./templates/react-redux/componentUtils");
+const getComponentHookTemplate = require("./templates/react-redux/componentHook");
+const getComponentSliceTemplate = require("./templates/react-redux/componentSlice");
+const getComponentSelectorTemplate = require("./templates/react-redux/componentSelector");
 
 const notifyUser = (message, type = '') => {
 	switch (type) {
@@ -49,7 +54,7 @@ const validateUserAction = (valueToValidate) => {
 *		redux > slice.js, selector.js, saga.js
 *		utils.js
 */
-const createComponent = async (componentName, currentDirectory) => {
+const createComponent = async (componentName, sliceName, currentDirectory) => {
     const createDirPath = `${currentDirectory}/${componentName}`
     if (!existsSync(createDirPath)) {
         await _createDirectory(createDirPath);
@@ -61,32 +66,32 @@ const createComponent = async (componentName, currentDirectory) => {
 
     await Promise.all([
         _createFileTemplate({
-            templateStr: getComponentTemplate(componentName),
+            templateStr: getComponentTemplate(componentName, sliceName),
             fileName: '/index.jsx',
             targetPath: createDirPath,
         }),
         _createFileTemplate({
-            templateStr: "",
+            templateStr: getComponentScssTemplate(componentName),
             fileName: `/styles/${componentName}.scss`,
             targetPath: createDirPath,
         }),
         _createFileTemplate({
-            templateStr: "",
+            templateStr: getComponentUtilsTemplate(),
             fileName: `/utils.js`,
             targetPath: createDirPath,
         }),
         _createFileTemplate({
-            templateStr: "",
+            templateStr: getComponentHookTemplate(componentName, sliceName),
             fileName: `/hooks/use${componentName}.js`,
             targetPath: createDirPath,
         }),
         _createFileTemplate({
-            templateStr: "",
+            templateStr: getComponentSliceTemplate(sliceName),
             fileName: `/redux/slice.js`,
             targetPath: createDirPath,
         }),
         _createFileTemplate({
-            templateStr: "",
+            templateStr: getComponentSelectorTemplate(sliceName),
             fileName: `/redux/selector.js`,
             targetPath: createDirPath,
         }),

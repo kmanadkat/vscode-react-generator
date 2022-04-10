@@ -2,7 +2,7 @@ const { commands } = require('vscode');
 const reactReduxGenerator = require('./app/generators/reactRedux.generator');
 
 function activate(context) {
-	let disposable = commands.registerCommand('react-redux-code-generator.helloWorld', reactReduxGenerator);
+	let disposable = commands.registerCommand('react-redux-code-generator.reactRedux', reactReduxGenerator);
 	context.subscriptions.push(disposable);
 }
 
