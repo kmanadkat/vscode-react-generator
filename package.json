@@ -1,11 +1,26 @@
 {
   "name": "react-redux-code-generator",
-  "displayName": "react-redux-code-generator",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "React Redux Code Generator",
+  "description": "This extension aims to help developer get pre-backed boiler plate code following best practices and bring consistency into project. It generates opinionated, batteries-included code snippets.",
+  "version": "1.0.0",
+  "publisher": "KrupeshAnadkat",
+  "keywords": ["react", "redux", "code", "generator", "code-generator"],
   "engines": {
     "vscode": "^1.66.0"
   },
+  "author": {
+    "name": "Krupesh Anadkat"
+  },
+  "icon": "images/icon.png",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/kmanadkat/vscode-react-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmanadkat/vscode-react-generator.git"
+  },
+  "homepage": "https://github.com/kmanadkat/vscode-react-generator/blob/main/README.md",
   "categories": [
     "Other"
   ],
