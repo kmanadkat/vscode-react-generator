@@ -1,5 +1,3 @@
-<img src="./images/icon.png" height="128px" />
-
 ## VsCode React Boilerplate Code Generator
 
 This extension aims to help developer get pre-backed boiler plate code following best practices and bring consistency into project. It generates opinionated, batteries-included code snippets.
