@@ -36,7 +36,7 @@ This extensions helps best if you are using following packages in your react pro
 4. React functional components
 
 ### Release Notes
-#### 1.0.0
+#### 1.2.2
 
 Initial release of this extension consisting of `Generate React Redux Component` Template
 

@@ -1,6 +1,6 @@
 const { window } = require("vscode")
-const { PROMPT_TYPES } = require("../app/enums")
-const { validateUserAction, promptForTargetDirectory, createComponent, notifyUser } = require("../app/utils")
+const { PROMPT_TYPES } = require("../enums")
+const { validateUserAction, promptForTargetDirectory, createComponent, notifyUser } = require("../utils")
 
 const reactRedux = async () =>  {
     try {
